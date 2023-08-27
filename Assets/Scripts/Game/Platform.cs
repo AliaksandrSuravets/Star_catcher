@@ -1,3 +1,4 @@
+using StarCatcher.Game.Services;
 using UnityEngine;
 
 namespace StarCatcher.Game
@@ -8,6 +9,11 @@ namespace StarCatcher.Game
 
         private void Update()
         {
+            if (GameService.Instance.IsGameOver)
+            {
+                return;
+            }
+
             MoveWithMouse();
         }
 
