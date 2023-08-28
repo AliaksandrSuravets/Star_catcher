@@ -17,9 +17,8 @@ namespace StarCatcher.Game
         [SerializeField] private int _startSpeed;
         [SerializeField] private int _maxSpeed;
         [Header("Score")]
-        [SerializeField] private int _changeScore;
+        [SerializeField] private int _score;
 
-        
         private int _speed;
 
         #endregion
@@ -43,8 +42,8 @@ namespace StarCatcher.Game
             {
                 return;
             }
-            
-            GameService.Instance.ChangeScore(_changeScore);
+
+            GameService.Instance.ChangeScore(_score);
             Destroy(gameObject);
         }
 

@@ -13,6 +13,11 @@ namespace StarCatcher.Game.Services
         [SerializeField] private float _spawnLengthCB;
         [SerializeField] private float _timeSpawnCB;
 
+        [Header("Spawn pick up")]
+        [SerializeField] private GameObject[] _pickUp;
+        [SerializeField] private float _spawnLengthPU;
+        [SerializeField] private float _timeSpawnPU;
+        
         #endregion
 
         #region Properties
@@ -30,7 +35,8 @@ namespace StarCatcher.Game.Services
 
         private void Start()
         {
-            InvokeRepeating("StartSpawningCB",1,_timeSpawnCB);
+            InvokeRepeating("StartSpawningCelestialBodies",1,_timeSpawnCB);
+            InvokeRepeating("StartSpawningPickUp",5,_timeSpawnPU);
         }
 
         #endregion
@@ -38,7 +44,7 @@ namespace StarCatcher.Game.Services
         #region Private methods
 
         //private IEnumerator Spawn  ??????????????????????????????????
-        private void Spawn(GameObject go, float length, float time)  
+        private void Spawn(GameObject go, float length)  
         {
             if (GameService.Instance.IsGameOver)
             {
@@ -50,10 +56,16 @@ namespace StarCatcher.Game.Services
             Instantiate(go, posToSpawn, Quaternion.identity);
             AmountSpawn++;
         }
+        
 
-        private void StartSpawningCB()
+        private void StartSpawningCelestialBodies()
         {
-            Spawn(_celestialBodie[Random.Range(0, _celestialBodie.Length)], _spawnLengthCB, _timeSpawnCB);
+            Spawn(_celestialBodie[Random.Range(0, _celestialBodie.Length)], _spawnLengthCB);
+        }
+
+        private void StartSpawningPickUp()
+        {
+            Spawn(_pickUp[Random.Range(0, _pickUp.Length)], _spawnLengthPU);
         }
 
         #endregion

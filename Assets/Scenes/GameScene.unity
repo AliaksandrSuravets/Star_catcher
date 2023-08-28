@@ -1334,6 +1334,12 @@ MonoBehaviour:
   - {fileID: 6082608915742838134, guid: b6edd68c418bdd8459df573778b2d598, type: 3}
   _spawnLengthCB: 12
   _timeSpawnCB: 3
+  _pickUp:
+  - {fileID: 2011411472511168814, guid: 542a3ffd6668fe44fa92ee691b8cb02b, type: 3}
+  - {fileID: 8908587421415782695, guid: 69f31b6c9836fc84c9c17399eb25b253, type: 3}
+  - {fileID: 981936496175915170, guid: 06c8ca7791bb14a4c9653fff4f45e2a5, type: 3}
+  _spawnLengthPU: 12
+  _timeSpawnPU: 6
 --- !u!1 &1457545329
 GameObject:
   m_ObjectHideFlags: 0

@@ -53,8 +53,8 @@ MonoBehaviour:
   - {fileID: 8441535224993506344, guid: 038af82427098264bbf7eb45d6309602, type: 3}
   _spriteRenderer: {fileID: 4232424822707150449}
   _startSpeed: 5
-  _changeScore: 10
   _maxSpeed: 35
+  _score: 10
 --- !u!50 &5462225415538240700
 Rigidbody2D:
   serializedVersion: 4

@@ -50,8 +50,8 @@ MonoBehaviour:
   - {fileID: 8854583506178977785, guid: 37407337051e1ca4d9adc8f024b3e274, type: 3}
   _spriteRenderer: {fileID: 2743897971823901595}
   _startSpeed: 5
-  _changeScore: -10
   _maxSpeed: 35
+  _score: -10
 --- !u!212 &2743897971823901595
 SpriteRenderer:
   m_ObjectHideFlags: 0
