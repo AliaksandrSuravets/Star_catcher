@@ -41,7 +41,7 @@ namespace StarCatcher.Game.PickUps
 
         private void PlayAudio()
         {
-            //  AudioService.Instance.PlayAudio(_audioClip);
+            AudioService.Instance.PlayAudio(_audioClip);
         }
 
         #endregion

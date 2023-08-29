@@ -52,6 +52,7 @@ MonoBehaviour:
   _startSpeed: 5
   _maxSpeed: 35
   _score: -10
+  _born: {fileID: 8300000, guid: 5dfd2d4286f08604e9c834f281d993b1, type: 3}
 --- !u!212 &2743897971823901595
 SpriteRenderer:
   m_ObjectHideFlags: 0

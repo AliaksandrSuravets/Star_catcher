@@ -18,15 +18,19 @@ namespace StarCatcher.Game
         [SerializeField] private int _maxSpeed;
         [Header("Score")]
         [SerializeField] private int _score;
+        [Header("Audio")]
+        [SerializeField] private AudioClip _born;
 
         private int _speed;
 
         #endregion
 
         #region Unity lifecycle
+        
 
         private void Start()
         {
+            AudioService.Instance.PlayAudio(_born); 
             SetSprite();
             ChangeSpeed();
         }
