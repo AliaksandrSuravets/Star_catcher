@@ -56,6 +56,7 @@ MonoBehaviour:
   _maxSpeed: 35
   _score: 10
   _born: {fileID: 8300000, guid: 6c5a5d122fcefe34fb68838340322e00, type: 3}
+  _destroyVFX: {fileID: 4593184484909914552, guid: 2e1e9506f5904a64b81744324fb7cd50, type: 3}
 --- !u!50 &5462225415538240700
 Rigidbody2D:
   serializedVersion: 4

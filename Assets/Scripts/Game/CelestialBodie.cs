@@ -20,17 +20,18 @@ namespace StarCatcher.Game
         [SerializeField] private int _score;
         [Header("Audio")]
         [SerializeField] private AudioClip _born;
+        [Header("VFX")]
+        [SerializeField] private GameObject _destroyVFX;
 
         private int _speed;
 
         #endregion
 
         #region Unity lifecycle
-        
 
         private void Start()
         {
-            AudioService.Instance.PlayAudio(_born); 
+            AudioService.Instance.PlayAudio(_born);
             SetSprite();
             ChangeSpeed();
         }
@@ -47,7 +48,9 @@ namespace StarCatcher.Game
                 return;
             }
 
+            VFXService.Instance.InstantiateVFX(_destroyVFX, transform.position);
             GameService.Instance.ChangeScore(_score);
+
             Destroy(gameObject);
         }
 
